@@ -1,0 +1,94 @@
+!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프론트엔드 교육 1주차</title>
+ 
+</head>
+<body>
+
+     <!--
+        1. <ol 태그>
+  
+        > 순서가 있는 목록
+        > 순위, 단계적으로 표현해야 하는 것들
+        > 주문서, 목차, 목록 , 차례 등을 나타낼때 사용
+        > type이라는 속성을 통해 1-2-3, a-b-c, i-ii-iii 등으로 표현할 수 있음
+        > start라는 속성을 통해 내가 원하고자 하는 숫자, 철자부터 출력 가능
+        ex) start = "5" -> 5부터 차례대로 순서를 매김
+        type = "A" start = "5" -> E부터 차례대로 순서를 매김
+        > reversed : default값은 true / 사용 시, 반대로 뒤집힘
+        ex) <ol reversed> <li>a</li><li>b</li><li>c</li> -> 3,2,1
+        
+    -->
+  
+   <ol start="1">
+            <li>Toy Story</li>
+            <li>Zootopia</li>
+            <li>Inside Out</li>
+        </ol>
+
+        <ol reversed>
+            <li>Toy Story</li>
+            <li>Zootopia</li>
+            <li>Inside Out</li>
+        </ol>
+
+        <ol type="a">
+            <li value="1">Toy Story</li>
+            <li value="3">Zootopia</li>
+            <li value="5">Inside Out</li>
+        </ol>
+        
+   <!--
+        2. <ul 태그>
+  
+        > 순서가 없는 목록을 단순히 나열해야할때
+        > default값은 블랙포인트의 원으로 표현됨
+        > li 태그와 중첩이 가능하며 중첩 시, 흰 원으로 표현됨
+        > 크롬 브라우저가 위치에 따라 블랙포인트, 화이트포인트의 원을 제공
+        
+    -->   
+    
+        <ul>
+        <li>토트넘 훗스퍼</li>
+        <li>선발명단
+            <ul>
+                <li>손흥민
+                    <ul><li>40경기 23골</li></ul>
+                </li>
+                    
+                <li>케인</li>
+                <li>클루셉스키</li>
+            </ul>
+        </li>
+    <ul>
+    
+  <!--
+    3. <li 태그>
+
+    >ol, ul로 감싸줌
+    >value라는 속성이 있음
+    >value값이 있다면 해당 속성의 값을 부여
+    >ol태그의 type대로 li가 정의 
+    >li의 value 속성이 있는데 value값이 부여되어 있다면 그 다음 li태그의 value값은 자동적으로 +1 (단, value값이 부여되지 않았다는 전제 하에 동작) 
+    >제일 처음 li태그에 value값이 부여되지 않았을 경우, 1 혹은 a부터 시작 (ol태그에 type 속성을 1 또는 a로 부여했다는 가정 하에 동작)
+-->   
+     <ol type="a">
+        <li>Toy Story</li>
+        <li value="3">Zootopia</li>
+        <li value="5">Inside Out</li>
+     </ol>
+
+    <ol type="1">
+        <li value="20">Toy Story</li>
+        <li>Zootopia</li>
+        <li>Inside Out</li>
+    </ol>
+
+        
+</body>
+  
+  
