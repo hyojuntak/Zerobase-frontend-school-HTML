@@ -1,0 +1,91 @@
+<!-- 
+  <부모,자식 상관관계>
+  > (부모) table, thead, tbody, tfoot > tr (자식)
+  > (부모)tr > td, th (자식)
+  
+  <table>
+  > HTML <table> 요소는 행과 열로 이루어진 표를 나타냄
+  > 부모자식 상관관계
+
+  <tr(Table Row)>
+  > HTML 테이블 행 요소 ( <tr>)는 테이블의 셀 행을 정의
+  > 속성align은 left,center,right, justify 기능을 통해 셀 내용의 가로 정렬을 처리
+
+  <td(Table Data)>
+  > 데이터를 포함하는 표의 셀을 정의
+
+  <th(Table Head)>
+  > 행이나 열을 대표하는 것이 들어감
+  > 종료 태그는 요소 바로 뒤에 <th>이나 <td> 요소가 뒤따르거나, 부모 요소에 더 이상 다른 데이터가 없을 경우 생략 가능
+
+  <thead>
+  > 테이블 태그 바로 아래 들어가며 thead태그 안에 tr,th태그를 사용할 수 있음
+  > thead 사용시, tbody, tfoot를 원칙적으로 사용
+  > 영역별 스타일 요소 부여 가능 (ex. tbody, tfoot)
+    
+  <tbody>
+  > 표의 여러 행(<tr>)을 묶어서 표 본문을 구성
+  > 표의 헤더 행을 나타내기 위해 <thead> 요소를 사용한 경우, <tbody> 요소는 반드시 그 뒤에 위치
+
+  <tfood>
+  > 테이블 바닥 요소
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">품목</th>
+                <th scope="col">지출</th>
+            </tr>
+        </thead>
+   
+        <tbody>
+            <tr>
+                <th colspan="2">식재료</th>
+            </tr>
+            <tr>
+                <th scope="row">대파</th>
+                <td>3,000</td>
+            </tr>
+
+            <tr>
+                <th scope="row">달걀</th>
+                <td>4,000</td>
+            </tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <th colspan="2">기타 품목</th>
+            </tr>
+            <tr>
+                <th scope="row">고양이간식</th>
+                <td>12,000</td>
+            </tr>
+
+            <tr>
+                <th scope="row">종이봉투</th>
+                <td>300</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Totals</th>
+                <td>33,000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
