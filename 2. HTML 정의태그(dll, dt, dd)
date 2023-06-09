@@ -1,0 +1,61 @@
+<!-- 
+
+  <dl>
+  > definition or description list
+  > 용어를 정의하거나 설명하는 태그
+  > dt(term), dd(description)요소를 감싸서 설명 목록을 생성
+  > 용어사전 구현이나 키, 값을 쌍으로 표시할때 사용
+
+  <dt>
+  > 설명 혹은 정의 리스트에서 용어를 나타냄
+  > <dl> 요소 안에 위치
+  > 보통 <dd> 요소가 뒤따르지만, 
+  > 여러 개의 <dt> 요소를 연속해 배치하면 바로 다음 <dd> 요소로 한꺼번에 서술
+
+  <dl>
+  > 설명 목록
+  > <dl>은 <dt>로 표기한 용어와 <dd> 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성
+  > 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용
+
+-->
+  
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CSS</title>
+    
+
+
+</head>
+<body>
+
+    <h1 style="color: red;">라면 레시피</h1>
+
+  
+    <dl>
+    
+        <dt style="font-weight: bold;">재료</dt>
+            
+            <dd>끓는 물</dd>
+            <dd>컵라면 or 봉지라면</dd>
+                
+        <dt style="font-weight: bold;">조리방법</dt>
+            
+            <dd>라면을 뜯는다.</dd>    
+            <dd>소스, 라면 순으로 물에 넣어준다.</dd>    
+            <dd>3~4분 정도 끓인다.</dd>    
+            <dd>계란을 투하한다.</dd>    
+            <dd>1분 정도 끓인 후 맛있게 먹는다.</dd>  
+         
+    </dl>
+    
+</body>
+
+
+</html>
+
+
