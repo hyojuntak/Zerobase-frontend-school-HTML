@@ -1,0 +1,83 @@
+<!--
+1. img - src
+
+1) 정의 : 이미지 삽입 요소
+
+2) 특징 
+   - closed 태그로 닫는 태그 없음 
+   - src(source) 특성은 필수
+   - src에는 주로 url(경로), 위치값이 들어감 (내가 이동하고자 하는 경로)
+   
+   - 경로로는 절대경로, 상대경로가 있음
+
+      1) 절대경로 : 이미지가 존재하는 주소가 있을 경우 사용(ex. 구글에 있는 호랑이 사진)
+      2) 상대경로 : 현재 위치에서 이미지가 있는 위치를 가리킬때 사용 (ex. ./index.png)
+
+      ../ : 현재 파일이 있는 폴더와 동일 위치로 이동 ex) 찾는 과정 : index.html 파일 나감 -> 같은 위치에 있는 img 폴더 들어감 -> 그 안에 있는 index.png 불러오기
+      ./ : 현재 파일 (생략 가능)
+
+    - 라이브 서버라는 익스텐션이 pc에다 가상의 서버를 띄워준 것이기 때문에 외부에서는 접속할 수 없음 
+
+
+2. img - alt, width, height
+
+1) alt 
+    - 이미지 경로가 잘못되었을 경우, 출력이 안될 수 있음 이때 해당 이미지에 대한 간략히 설명할때 사용
+    
+2) width
+   - 이미지 가로 크기를 말함
+   - 해당 이미지의 가로 사이즈를 변경하고 싶을때 사용
+   - 가로 사이즈가 변하면서 세로 사이즈도 변함 
+   
+3) height
+   - 이미지 세로 크기를 말함
+   - width와 마찬가지로 세로 사이즈를 조절하면 가로 사이즈도 변함 
+   - width,height 둘 중 하나에만 값을 주면됨
+
+3. img - 웹에서 지원하는 img 유형
+
+1) 지원하는 이미지 형식
+  - HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않음
+  - 각각의 사용자 에이전트는 서로 다른 형식을 지원 
+  - 전체 목록은 웹 브라우저가 지원하는 이미지 형식 안내서 (en-US)를 참고
+
+2) 지원하는 이미지 종류
+- 레스터 이미지 : ㄱ역자 픽셀을 쭉 이어서 만듦 ex) 풍경사진
+- 백터 이미지 : 아이콘, 다이어그램 등에 사용 / 깨지지 않음 
+- webp > jpeg, png, gif를 대체하기 위해 나옴 / 장점 : 이미지 포멧, 품질, 압축률 등이 우수함 / 그러나 지원되는 브라우저가제한적임
+- webp가 허용되는 사이트 검색 : can i use 
+
+4. img - scrset
+
+- 반응형 이미지를 만들기 위해 사용
+- 사용자의 view port에 따라서 반응
+- 기기에 따라 이미지를 크게 혹은 작게 보여줌
+- 인터넷 익스플로어에서 지원하지 않음
+
+5. img - size
+
+- 소스 크기를 나타내는, 쉼표로 구분한 하나 이상의 문자열을 말함 
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example.css">
+
+    <title>프론트엔드 교육 1주차</title>
+
+</head>
+<body>
+    
+    <img src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E" alt="지난달 입양된 포메라니안 3살 뭉치입니다." width="200px">
+    <img src="../img/프로필.jpg" alt="프론트엔드 개발자 THJ" width="200px">
+
+</body>
+</html>
