@@ -1,0 +1,43 @@
+1. Video 
+
+- 크롬 브라우저는 기본적으로 mp4형식의 파일을 지원함
+- src는 동영상 경로를 말함 (선택사항) 
+- src가 선택사항인 이유는 source라는 자식요소를 가지기 때문임
+- controls : 소리 조절(volume), 동영상 탐색(seek), 일시 정지(pause)/재시작(resume)을 할 수 있는 컨트롤러를 제공함
+- autoplay : 비디오 컨텐츠가 사운드를 가지고 있을때, 브라우저에서 autoplay 기능을 막는 경우가 있음
+- autoplay가 된다면 웹 페이지 이동 시, 소리가 크게 나올 수 있음. 유저 경험에 안 좋기 때문임
+- poster: 사용자가 동영상을 재생하거나 탐색하기 전까지 출력되는 포스터 프레임 주소를 말함
+- 이 속성이 명시되지 않으면, 첫 번째 프레임이 사용 가능하게 될때까지 아무것도 출력되지 않다가, 가능하게 되면 첫 번째 프레임을 포스터 프레임으로 출력(썸네일이라고 보면됨)
+   
+2. Audio
+
+- video와 마찬가지로 src 특성은 선택속성이며 source태그를 자식으로 사용하여  한개 이상의 오디오 소스를 지정할 수 있음 
+- 여러개의 오디오 소스를 지정했을 경우, 브라우저가 지원가능한 형식인지 먼저 파악함
+- 만약 지원불가능한 형식이라면 '시청할 수 없습니다' 등 안내메세지를 미리 남기는 게 좋음
+- autoplay의 경우, vied autoplay와 마찬가지로  사용자 경험에 악영향을 끼칠 수 있으므로 자동재생을 막기도 함 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example.css">
+
+    <title>프론트엔드 교육 1주차</title>
+
+</head>
+<body>
+    
+    <h2>우리가 사는 지구, 어떻게 생겼을까?</h2>
+    
+    <video poster="../img/small.png" controls>
+        <source src="../video/sample_video.mp4 (240p).mp4">
+        Sorry, your browser doesn't support embedded videos">
+    </video>
+
+</body>
+</html>
+
+
